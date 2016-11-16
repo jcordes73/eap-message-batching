@@ -1,0 +1,8 @@
+/system-property=clusterUser:add(value="admin")
+/system-property=clusterPassword:add(value="password")
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-user,value=${clusterUser})
+/subsystem=messaging-activemq/server=default:write-attribute(name=cluster-password,value=${clusterPassword})
+jms-queue add --queue-address=member --entries=jms/queue/member,java:jboss/exported/jms/queue/member
+/subsystem=messaging-activemq/server=default/address-setting=#:write-attribute(name=max-size-bytes,value=20971520)
+
+xa-data-source add --name=jboss-javaee-multi-test --jndi-name="java:jboss/datasources/jboss-javaee-multiTestDS" --driver-name=h2 --min-pool-size=10 --max-pool-size=20 --user-name=sa --password=sa --xa-datasource-properties={["URL"="jdbc:h2:mem:jboss-javaee-multi-test;DB_CLOSE_DELAY=-1"]}

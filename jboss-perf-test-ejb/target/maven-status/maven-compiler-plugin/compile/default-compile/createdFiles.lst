@@ -1,0 +1,3 @@
+org/jboss/perf/test/service/MemberBatchConsumerService.class
+org/jboss/perf/test/service/MemberBatchConsumerTask.class
+org/jboss/perf/test/service/MemberBatchConsumer.class
