@@ -36,7 +36,6 @@
         <module>jboss-perf-test-jpa</module>
         <module>jboss-perf-test-ejb</module>
         <module>jboss-perf-test-ear</module>
-        <module>jboss-perf-test-camel</module>
     </modules>
 
     <properties>
